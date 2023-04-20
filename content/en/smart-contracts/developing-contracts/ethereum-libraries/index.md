@@ -15,22 +15,13 @@ toc: true
 
 ## OpenZeppelin
 
-[OpenZeppelin](https://www.openzeppelin.com/contracts) provides a library of battle-tested smart contract templates, including widely used implementations of ERC token standards. For a guided example that implements an ERC20 token on the Filecoin network, see [Example using an ERC20 contract](#example-using-an-erc20-contract).
+[OpenZeppelin](https://www.openzeppelin.com/contracts) provides a library of battle-tested smart contract templates, including widely used [implementations of ERC token standards](https://docs.openzeppelin.com/contracts/2.x/tokens#standards). For a guided example that implements an ERC20 token on the Filecoin network, see [Example using an ERC20 contract](#example-using-an-erc20-contract).
 
-### Benefits 
+Learn more about OpenZepplin with the following resources:
 
-OpenZeppelin offers the following to smart contract developers:
-
-- Implementations of standards like ERC20, ERC721, and ERC1155.
-- Flexible access control schemes like `Ownable`, `AccessControl`, and `onlyRole`.
-- Useful and secure utilities for signature verification, `SafeMath`, etc..
-
-Token standards, such as [ERC20](https://docs.openzeppelin.com/contracts/4.x/erc20), are the most widely used smart contract libraries from OpenZepplin. These contracts, listed below, implement both _fungible_ and _non-fungible_ tokens:
-
-- [ERC20](https://docs.openzeppelin.com/contracts/4.x/erc20) is the simplest and most widespread token standard for fungible assets. 
-- [ERC721](https://docs.openzeppelin.com/contracts/4.x/erc721) is the de-facto solution for non-fungible tokens and is often used for collectibles and games.
-- [ERC777](https://docs.openzeppelin.com/contracts/4.x/erc777) provides a richer standard for fungible tokens, supporting new use cases and backwards compatibility with ERC20.
-- [ERC1155](https://docs.openzeppelin.com/contracts/4.x/erc1155) is a new standard for _multi-tokens_, where a single contract represents multiple fungible and non-fungible tokens, and operations are batched for increased gas efficiency.
+- [OpenZeppelin Contracts website](https://www.openzeppelin.com/contracts)
+- [Documentation](https://docs.openzeppelin.com/contracts/4.x/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 
 ### Using OpenZeppelin with FVM
 
@@ -53,10 +44,10 @@ In the following tutorial, you'll write and deploy a smart contract that impleme
 
 #### Prerequisites
 
-Before you begin, you must have:
+Before starting the procedure, ensure that you have:
 
-- Remix.
-- MetaMask.
+- [Remix](https://remix.ethereum.org).
+- [MetaMask](https://metamask.io/).
 - [MetaMask connected to the Hyperspace testnet]({{< relref "/basics/assets/metamask-setup" >}}).
 - Test tokens (tFIL) [from the faucet]({{< relref "/networks/hyperspace/get-test-tokens">}}).
 
@@ -68,45 +59,45 @@ In this procedure, you will create, deploy, mint and send an [ERC20](https://doc
 
 1. Next to **Workspaces**, click the **+** icon to create a new workspace.
 
-1. In the **Choose a template** dropdown, select **ERC 20** along with the **Mintable** checkbox.
-
-   ![Set workspace details.](create-a-workspace-details.png)
+1. In the dropdown:
+   - Set **Choose a template** to **ERC 20**.
+   - Under **Features**, select **Mintable**.
+   - In **Workspace name**, enter a name or keep the default.
+   - Leave all other settings on default.
 
 1. Click **OK**. 
 
    {{< alert >}}
    **Checkpoint**
 
-   A new workspace and an ERC20 token called `MyToken.sol` have been created.
+   A new workspace and an ERC20 token called `MyToken.sol` have been created. You can view the workspace and its contents in the Remix menu.
    {{< /alert >}}
 
-1. In the **contract** directory, open **MyToken.sol**.
+1. In the **contracts** directory in the menu, click `MyToken.sol`.
 
-1. Set the token `<name>` and `<symbol>`:
+1. The `MyToken.sol` code should look similar to the following:
 
    ```solidity
-   // contracts/GLDToken.sol
    // SPDX-License-Identifier: MIT
-   pragma solidity ^0.8.0;
+   pragma solidity ^0.8.9;
 
    import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+   import "@openzeppelin/contracts/access/Ownable.sol";
 
-   contract MyToken is ERC20 {
-      constructor(uint256 initialSupply) ERC20(<name>, <symbol>) {
-         _mint(msg.sender, initialSupply);
+   contract MyToken is ERC20, Ownable {
+      constructor() ERC20("MyToken", "MTK") {}
+
+      function mint(address to, uint256 amount) public onlyOwner {
+         _mint(to, amount);
       }
    }
    ```
 
-   Next, compile and deploy the contract on Filecoin.
+1. At the top of the workspace, click the green play symbol to compile the contract. Once the contract compiles, an `artifacts` folder is generated in the workspace directory.
 
-1. At the top of the workspace, click the green play symbol to compile the contract.
+1. Open the the **Deploy & run transactions** tab on the left.
 
-   ![Compile the contract.](compile-compile.png)
-
-1. Once the contract compiles, open the **Deploy** tab on the left.
-
-1. Under the **Environment** dropdown, select **Injected Provider - MetaMask**. 
+1. In the tab **Environment** dropdown, select **Injected Provider - MetaMask**. <!--ISSUE I see a "Injected Provider - Brave" option but not Metamask !-->
 
 1. In the MetaMask popup window, select **Confirmed connection**.
 
@@ -135,14 +126,6 @@ In this procedure, you will create, deploy, mint and send an [ERC20](https://doc
 1. In MetaMask, confirm the transaction. 
 
 Once the network processes the transaction, the token is minted and sent to your network address. Congratulations, you've completed the tutorial!
-
-### Additional resources
-
-Learn more about OpenZepplin with the following resources:
-
-- [OpenZeppelin Contracts website](https://www.openzeppelin.com/contracts)
-- [Documentation](https://docs.openzeppelin.com/contracts/4.x/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 
 ## DappSys
 
