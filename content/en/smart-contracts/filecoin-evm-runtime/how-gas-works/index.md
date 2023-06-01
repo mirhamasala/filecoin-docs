@@ -43,17 +43,17 @@ Let's take a transaction as an example. Our gas parameters are:
 The total fee is `(GasUsage × BaseFee) + (Gaslimit x GasPremium)`:
 
 ```plaintext
-   1000 
-x    20
-= 20000
+    1000 
+x     20
+= 2,0000
 
-   2000 
-x     5 
-= 10000 
+    2000 
+x      5 
+= 1,0000 
 
-  20000
-+ 10000
-= 30000 attoFIL
+  2,0000
++ 1,0000
+= 3,0000 attoFIL
 ```
 
 Additionally, the message sender can also set the `GasFeeCap` parameter they are willing to pay. If the sender sets the `GasLimit` too high, the network will compute the amount of gas to be refunded and the amount of gas to be burned as `OverEstimationBurn`.
@@ -77,7 +77,7 @@ If you'd rather not calculate and estimate gas for every message, you can just l
 
 ## Ethereum compatibility
 
-Since Filecion is fully EVM-compatible, Filecoin nodes also provide Ethereum-compatible APIs to support gas estimation:
+Since Filecoin is fully EVM-compatible, Filecoin nodes also provide Ethereum-compatible APIs to support gas estimation:
 
 - [EthEstimateGas]({{< relref "/reference/json-rpc/eth#ethestimategas" >}}): generates and returns an estimate of how much gas is necessary to allow the transaction to complete.
 - [EthMaxPriorityFeePerGas]({{< relref "/reference/json-rpc/eth#ethmaxpriorityfeepergas" >}}): returns a fee per gas that is an estimate of how much you can pay as a priority fee, or ’tip’, to get a transaction included in the current block.
