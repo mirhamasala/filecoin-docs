@@ -127,11 +127,6 @@ The scratch space contents from PC1 is copied over to the PC2 worker. This PC2 w
 
 C1 doesn't require much attention for our architecture. C2 however requires a capable GPU again.
 
-<!--
-## Beginner's corner
-TODO NOBLOCK ANGELO to write a section on the use of refurbished hardware
--->
-
 ## Solo storage providing
 
 Please take a look at the presentation Benjamin Hoejsbo from [PIKNIK](https://www.piknik.com) gave, in which solo storage provider setups are examined. The presentation is from 2022, but the content is still relevant as of March 2023.
