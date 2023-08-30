@@ -4,6 +4,11 @@
   weight = 10
 
 [[main]]
+  name = "Data IO"
+  url = "/data-io/basics/overview"
+  weight = 20
+
+[[main]]
   name = "Storage Providers"
   url = "/storage-provider/basics/overview/"
   weight = 30
@@ -136,17 +141,23 @@
 
 # docs.filecoin.io/store
 # ----------------------
-[[store]]
-  name = "Overview"
+[[data-io]]
+  name = "Basics"
   weight = 10
-  identifier = "store-overview"
-  url = "/store/overview"
+  identifier = "data-io-basics"
+  url = "/data-io/basics"
 
-[[store]]
-  name = "Tools"
+[[data-io]]
+  name = "Store"
   weight = 20
-  identifier = "store-tools"
-  url = "/store/tools"
+  identifier = "data-io-store"
+  url = "/data-io/store"
+
+[[data-io]]
+  name = "Retrieve"
+  weight = 30
+  identifier = "data-io-retrieve"
+  url = "/data-io/retrieve"
 # ----------------------
 
 
