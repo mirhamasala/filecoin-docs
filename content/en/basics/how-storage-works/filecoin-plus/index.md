@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-how-storage-works"
     identifier: "filecoin-plus-89943b8e4d0e821aa9c4a499db2553b0"
-weight: 100
+weight: 620
 toc: true
 aliases:
     - "/store/overview/start-storing/"

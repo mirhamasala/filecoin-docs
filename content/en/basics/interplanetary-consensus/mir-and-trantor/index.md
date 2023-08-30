@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-interplanetary-consensus"
     identifier: "ipc-mir-and-trantor"
-weight: 120
+weight: 430
 toc: true
 ---
 

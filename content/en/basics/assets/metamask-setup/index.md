@@ -9,7 +9,7 @@ menu:
   basics:
     identifier: "metamask-setup-6367921279d3535af07299e2f6efe3a8"
     parent: "basics-assets"
-weight: 525
+weight: 325
 toc: true
 aliases:
     - "/networks/mainnet/add-to-metamask"

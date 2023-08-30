@@ -114,6 +114,12 @@
   url = "/basics/interplanetary-consensus-overview"
 
 [[basics]]
+  name = "Governance"
+  weight = 45
+  identifier = "basics-governance"
+  url = "/basics/governance"
+
+[[basics]]
   name = "How storage works"
   weight = 50
   identifier = "basics-how-storage-works"

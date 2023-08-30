@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-interplanetary-consensus"
     identifier: "ipc-hierarchical-consensus"
-weight: 110
+weight: 410
 toc: true
 ---
 

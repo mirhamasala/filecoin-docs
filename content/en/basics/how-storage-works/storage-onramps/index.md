@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-how-storage-works"
     identifier: "storage-onramps-a18c421e5c544ae641f5f01545078431"
-weight: 100
+weight: 630
 toc: true
 aliases:
     - "/developers/storage-helpers/overview/"

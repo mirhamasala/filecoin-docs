@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-how-retrieval-works"
     identifier: "serving-retrievals-21f14f25e21f23f44989b9fafad6868d"
-weight: 420
+weight: 730
 toc: true
 ---
 

@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-interplanetary-consensus"
     identifier: "ipc-agent-402fa825ff3141663e8939839a869f8d"
-weight: 120
+weight: 420
 toc: true
 ---
 

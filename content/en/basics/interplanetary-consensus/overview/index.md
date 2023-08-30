@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-interplanetary-consensus"
     identifier: "overview-12144d796dedc50c9c1807c130bd3530"
-weight: 100
+weight: 400
 toc: true
 ---
 

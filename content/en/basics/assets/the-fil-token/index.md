@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-assets"
     identifier: "the-fil-token-e9ed0e15f2f654499e0decb04f167cee"
-weight: 510
+weight: 310
 toc: true
 ---
 

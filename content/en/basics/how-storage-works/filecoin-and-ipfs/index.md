@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-how-storage-works"
     identifier: "filecoin-and-ipfs-a15db5bf50b378ffcde1bcf51e363b7c"
-weight: 330
+weight: 630
 toc: true
 aliases:
     - "/about-filecoin/why-filecoin/"

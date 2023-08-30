@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-assets"
     identifier: "wallets-b85072ee6d585f44c54aba2faff93390"
-weight: 520
+weight: 320
 toc: true
 ---
 

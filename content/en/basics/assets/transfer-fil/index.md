@@ -9,7 +9,7 @@ menu:
   basics:
     parent: "basics-assets"
     identifier: "transfer-fil-64e3212081d842e80c9baad9801a9e8d"
-weight: 540
+weight: 340
 toc: true
 aliases:
     - "/smart-contracts/wallets/transfer-fil/"
